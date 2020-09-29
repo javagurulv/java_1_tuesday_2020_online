@@ -11,7 +11,7 @@ import teacher.codereview.CodeReviewComment;
 class BookDataBaseImpl implements BookDataBase {
 
     @CodeReviewComment(teacher = "Must be private!")
-    //added
+    //added private
     private List<Book> books = new ArrayList<>();
     private List<Book> booksOfOneAuthor = new ArrayList<>();
     private Long id = 0L;
