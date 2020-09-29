@@ -13,6 +13,7 @@ class BookDataBaseImpl implements BookDataBase {
     @CodeReviewComment(teacher = "Must be private!")
     //added
     private List<Book> books = new ArrayList<>();
+    private List<Book> booksOfOneAuthor = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -39,6 +40,19 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return Optional.empty();
+    }
+
+    @Override
+    public List<Book> findByAuthor(String author) {
+        for (int i = 0; i < books.size(); i++) {
+            String authorOfBooks = books.get(i).getAuthor();
+            if (authorOfBooks.contains(author)) {
+                Book authorBooks = books.get(i);
+                booksOfOneAuthor.add(authorBooks);
+                return booksOfOneAuthor;
+            }
+        }
+        return null;
     }
 }
 
