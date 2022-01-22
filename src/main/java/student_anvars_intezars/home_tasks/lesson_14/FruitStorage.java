@@ -39,4 +39,8 @@ class FruitStorage {
         }
         return redApples;
     }
-}
+
+    //public List<Apple> findByColor(String colorToFind) {
+    //    String color = "";
+     //   for(; )
+    }
