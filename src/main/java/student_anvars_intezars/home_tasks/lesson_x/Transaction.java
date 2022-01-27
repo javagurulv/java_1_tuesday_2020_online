@@ -19,20 +19,10 @@ public class Transaction {
     }
 
     public boolean isDeposit() {
-        if (transactionType == TransactionType.DEPOSIT) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return transactionType == TransactionType.DEPOSIT;
     }
 
     public boolean isWithdrawal() {
-        if (transactionType == TransactionType.WITHDRAWAL) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return transactionType == TransactionType.WITHDRAWAL;
     }
 }
