@@ -26,4 +26,13 @@ public class Transaction {
             return false;
         }
     }
+
+    public boolean isWithdrawal() {
+        if (transactionType == TransactionType.WITHDRAWAL) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }

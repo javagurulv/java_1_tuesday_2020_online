@@ -25,4 +25,20 @@ public class TransactionTest {
         assertTrue(!secondResult);
     }
 
+    @Test
+    public void isWithdrawalTest() {
+
+        TransactionType depositTransaction = TransactionType.DEPOSIT;
+        TransactionType withdrawalTransaction = TransactionType.WITHDRAWAL;
+
+        Transaction firstTransaction = new Transaction(7,depositTransaction);
+        Transaction secondTransaction = new Transaction(8,withdrawalTransaction);
+
+        Boolean firsResult = firstTransaction.isWithdrawal();
+        Boolean secondResult = secondTransaction.isWithdrawal();
+
+        assertTrue(!firsResult);
+        assertTrue(secondResult);
+    }
+
 }
