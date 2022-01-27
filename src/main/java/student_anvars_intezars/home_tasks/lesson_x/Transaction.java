@@ -17,4 +17,13 @@ public class Transaction {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
+    public boolean isDeposit() {
+        if (transactionType == TransactionType.DEPOSIT) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
