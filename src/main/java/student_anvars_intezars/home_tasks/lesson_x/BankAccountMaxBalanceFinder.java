@@ -8,7 +8,7 @@ public class BankAccountMaxBalanceFinder {
 
         Transaction[] transactions = bankAccount.getTransactions();
         for (int i = 0; i < transactions.length; i++) {
-            if (minBalance > transactions[i].getAmount()) {
+            if (minBalance < transactions[i].getAmount()) {
                 minBalance = transactions[i].getAmount();
             }
         }
